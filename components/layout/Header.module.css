@@ -4,6 +4,11 @@
   font-family: var(--font-noto-sans), sans-serif;
   background-color: white;
   /* Ensure background is opaque */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 /* Top Bar */
@@ -49,9 +54,6 @@
 .navbar {
   background: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 .navbarContainer {

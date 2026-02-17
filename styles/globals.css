@@ -96,6 +96,19 @@ section {
   margin-top: 1rem;
 }
 
+/* Main Content Adjustment for Fixed Header */
+main {
+  padding-top: 135px;
+  /* Approximate height of TopBar + Navbar on desktop */
+}
+
+@media (max-width: 900px) {
+  main {
+    padding-top: 74px;
+    /* Approximate height of Navbar on mobile (TopBar is hidden) */
+  }
+}
+
 .mt-2 {
   margin-top: 2rem;
 }
