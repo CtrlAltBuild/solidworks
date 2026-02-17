@@ -153,11 +153,6 @@
 
 /* Certifications Section */
 .certifications {
-  padding: 4rem 0;
-  background: #FFF7ED;
-}
-
-.certifications {
   padding: 5rem 0;
   background: #FFF7ED;
 }
@@ -165,7 +160,7 @@
 .certGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem 2rem;
+  gap: 3rem 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -174,7 +169,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  text-align: center;
+  gap: 1rem;
 }
 
 .certItem:last-child {
@@ -183,61 +179,23 @@
 
 .certBadge {
   position: relative;
-  width: 135px;
-  height: 135px;
-  background: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  border: 4px solid #1D4ED8;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.certSeal {
-  width: 100%;
-  height: 100%;
-  background: #EF4444;
-  border-radius: 50%;
-  border: 2px solid #fff;
+  width: 150px;
+  height: 150px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+  transition: transform 0.3s ease;
 }
 
-.dsLogo {
-  font-size: 0.45rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 5px;
+.certBadge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
-.dsLogo span {
-  font-weight: 900;
-  font-style: italic;
-  font-size: 0.7rem;
-}
-
-.certType {
-  font-size: 0.75rem;
-  font-weight: 800;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 3px 0;
-  width: 90%;
-  margin: 3px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.certProfessional {
-  font-size: 0.4rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  line-height: 1.2;
+.certItem:hover .certBadge {
+  transform: scale(1.05);
 }
 
 .certTextBox {
@@ -245,13 +203,14 @@
   border: 1px solid #EA580C;
   border-radius: 12px;
   padding: 0.8rem 1.2rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #EA580C;
   text-align: center;
   width: 100%;
-  max-width: 250px;
+  max-width: 280px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: var(--font-space-grotesk), sans-serif;
 }
 
 /* Why Choose Us */

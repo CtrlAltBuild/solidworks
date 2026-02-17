@@ -18,13 +18,19 @@ export const metadata = generateSEOMetadata({
 });
 
 const certifications = [
-  { id: 1, title: 'Certified SOLIDWORKS Design Professional', type: 'DESIGN' },
-  { id: 2, title: 'Certified SOLIDWORKS Sheet Metal Professional', type: 'SHEET METAL' },
-  { id: 3, title: 'Certified SOLIDWORKS Drawing Tools Professional', type: 'DRAWING TOOLS' },
-  { id: 4, title: 'Certified SOLIDWORKS Surfacing Professional', type: 'SURFACING' },
-  { id: 5, title: 'Certified SOLIDWORKS Weldments Professional', type: 'WELDMENTS' },
-  { id: 6, title: 'Certified SOLIDWORKS Mold Making Professional', type: 'MOLD MAKING' },
-  { id: 7, title: 'Certified SOLIDWORKS CAM Professional', type: 'CAM' },
+  { id: 8, title: 'Certified SOLIDWORKS Design Associate', image: '/badges/certi8.png' },
+  { id: 1, title: 'Certified SOLIDWORKS Design Professional', image: '/badges/certi1.png' },
+  { id: 2, title: 'Certified SOLIDWORKS Sheet Metal Professional', image: '/badges/certi2.png' },
+  { id: 5, title: 'Certified SOLIDWORKS Weldments Professional', image: '/badges/certi5.png' },
+  { id: 4, title: 'Certified SOLIDWORKS Surfacing Professional', image: '/badges/certi4.png' },
+  { id: 3, title: 'Certified SOLIDWORKS Drawing Tools Professional', image: '/badges/certi3.png' },
+  { id: 6, title: 'Certified SOLIDWORKS Mold Making Professional', image: '/badges/certi6.png' },
+  { id: 9, title: 'Certified SOLIDWORKS Design Expert', image: '/badges/certi9.png' },
+  { id: 10, title: 'Certified SOLIDWORKS Simulation Associate', image: '/badges/certi10.png' },
+  { id: 11, title: 'Certified SOLIDWORKS Simulation Professional', image: '/badges/certi11.png' },
+  { id: 12, title: 'Certified SOLIDWORKS Simulation Expert', image: '/badges/certi12.png' },
+  { id: 13, title: 'Certified SOLIDWORKS Flow Simulation', image: '/badges/certi13.png' },
+  { id: 7, title: 'Certified SOLIDWORKS CAM Professional', image: '/badges/certi7.png' },
 ];
 
 const roles = [
@@ -97,8 +103,11 @@ export default function SolidWorksTrainingPage() {
             {courses.map((course) => (
               <div key={course.id} className={styles.courseCard}>
                 <div className={styles.courseImage}>
-                  {/* Placeholder for course image */}
-                  <span>{course.title}</span>
+                  {course.image ? (
+                    <img src={course.image} alt={course.title} />
+                  ) : (
+                    <span>{course.title}</span>
+                  )}
                 </div>
                 <div className={styles.courseContent}>
                   <h3>{course.title}</h3>
@@ -114,22 +123,12 @@ export default function SolidWorksTrainingPage() {
       {/* Certifications Section */}
       <section className={styles.certifications}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>International Certifications</h2>
+          <h2 className={styles.sectionTitle}>International Badges</h2>
           <div className={styles.certGrid}>
             {certifications.map((cert) => (
               <div key={cert.id} className={styles.certItem}>
                 <div className={styles.certBadge}>
-                  <div className={styles.certSeal}>
-                    <div className={styles.dsLogo}>
-                      <span>DS</span> DASSAULT<br />SYSTEMES
-                    </div>
-                    <div className={styles.certType}>
-                      {cert.type}
-                    </div>
-                    <div className={styles.certProfessional}>
-                      SOLIDWORKS PROFESSIONAL
-                    </div>
-                  </div>
+                  <img src={cert.image} alt={cert.title} />
                 </div>
                 <div className={styles.certTextBox}>
                   {cert.title}
